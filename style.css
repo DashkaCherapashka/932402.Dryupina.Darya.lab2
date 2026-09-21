@@ -622,3 +622,28 @@ footer p {
     opacity: 0.95;
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 800px) {
+    header h1 {
+        font-size: 52px;
+    }
+
+    .content-row {
+        flex-direction: column;
+    }
+
+    aside {
+        flex: 1;
+        margin-bottom: 30px;
+    }
+}
