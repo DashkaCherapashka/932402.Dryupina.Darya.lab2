@@ -6,6 +6,38 @@
     <title>О себе — Музыкант и звукорежиссёр</title>
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        section ul li {
+            padding-left: 60px;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        section ul li::before {
+            content: "♪";
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+            height: auto;
+            background: none;
+            border-radius: 0;
+            color: var(--color-accent);
+            font-size: 28px;
+            font-weight: bold;
+            opacity: 1;
+            box-shadow: none;
+        }
+
+        section ul li::after {
+            content: none;
+        }
+
+        section ul li:hover::before {
+            color: var(--color-primary);
+            animation: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -130,6 +162,10 @@
             <button type="submit">Отправить</button>
         </form>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Дарья Дрюпина. Все права защищены. Музыка — тоже, если бы она у меня была.</p>
+    </footer>
 
 </body>
 </html>
