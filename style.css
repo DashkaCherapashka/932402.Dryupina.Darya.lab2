@@ -154,3 +154,120 @@ section ol li::before {
 section ol li::after {
     content: none;
 }
+
+aside {
+    flex: 0 0 300px;
+    background: linear-gradient(135deg, var(--color-light) 0%, #eac9ff 100%);
+    border: 2px dashed var(--color-primary);
+    border-radius: 16px;
+    padding: 30px 35px;
+    box-shadow: 0 8px 30px rgba(195, 58, 237, 0.15);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+aside h2 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 28px;
+    margin: 0 0 15px;
+    letter-spacing: 1px;
+}
+
+aside h3 {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 25px 0 8px;
+}
+
+aside h3:first-of-type {
+    margin-top: 0;
+}
+
+aside ul:last-child {
+    flex: 1;
+}
+
+.aside-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.aside-list li {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-primary);
+    padding: 2px 0 2px 20px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.aside-list li::before {
+    content: "♪";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-accent);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.aside-list--plain li {
+    padding-left: 0;
+}
+
+.aside-list--plain li::before {
+    content: none;
+}
+
+.aside-list--heart li::before {
+    content: "♥";
+    color: var(--color-primary);
+    font-size: 14px;
+}
+
+.aside-list .no-marker {
+    padding-left: 0;
+    margin-top: 8px;
+    font-style: italic;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.aside-list .no-marker::before {
+    content: none;
+}
+
+.aside-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.aside-tags li {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-white);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    padding: 5px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(83, 26, 94, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aside-tags li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(195, 58, 237, 0.4);
+}
