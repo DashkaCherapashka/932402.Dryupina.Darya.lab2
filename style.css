@@ -113,3 +113,43 @@ header p {
     text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.6);
     animation: fadeInUp 1s ease-out 0.4s both;
 }
+
+.equalizer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5px;
+    height: 35px;
+    margin-top: 15px;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.equalizer span {
+    display: block;
+    width: 4px;
+    background: linear-gradient(180deg, var(--color-accent), #ffffff);
+    border-radius: 2px;
+    animation: equalize 1.2s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(195, 58, 237, 0.7);
+}
+
+.equalizer span:nth-child(1) { animation-delay: 0s; height: 40%; }
+.equalizer span:nth-child(2) { animation-delay: 0.2s; height: 70%; }
+.equalizer span:nth-child(3) { animation-delay: 0.4s; height: 100%; }
+.equalizer span:nth-child(4) { animation-delay: 0.1s; height: 60%; }
+.equalizer span:nth-child(5) { animation-delay: 0.3s; height: 85%; }
+.equalizer span:nth-child(6) { animation-delay: 0.5s; height: 55%; }
+.equalizer span:nth-child(7) { animation-delay: 0.15s; height: 75%; }
+.equalizer span:nth-child(8) { animation-delay: 0.35s; height: 90%; }
+.equalizer span:nth-child(9) { animation-delay: 0.25s; height: 50%; }
+.equalizer span:nth-child(10) { animation-delay: 0.45s; height: 80%; }
+.equalizer span:nth-child(11) { animation-delay: 0.05s; height: 65%; }
+.equalizer span:nth-child(12) { animation-delay: 0.55s; height: 95%; }
+.equalizer span:nth-child(13) { animation-delay: 0.18s; height: 45%; }
+.equalizer span:nth-child(14) { animation-delay: 0.38s; height: 72%; }
+.equalizer span:nth-child(15) { animation-delay: 0.28s; height: 88%; }
+
+@keyframes equalize {
+    0%, 100% { transform: scaleY(0.4); }
+    50% { transform: scaleY(1); }
+}
